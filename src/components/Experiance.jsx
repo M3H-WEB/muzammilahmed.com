@@ -24,53 +24,67 @@ import social9 from "../assets/img/social9.jpg"
 function Experiance() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
   const projects = [
     {
       id: 1,
       image: bookstore1,
-      title: "BoookStore",
+      title: "BookStore",
       description: "A scalable e-commerce application with a modern UI and robust backend.",
-      details: "This project was built using React, Node.js, and MongoDB. It features user authentication, product management, and secure payment integration.",
-      images: [bookstore8,bookstore1, bookstore2, bookstore3,bookstore9,bookstore10, bookstore4, bookstore5, bookstore6, bookstore7,],
+      details:
+        "Built using React, Node.js, and MongoDB. Includes Admin panel and User authentication, product management, and secure payment integration. Provides a seamless shopping experience with scalability in mind.",
+      tags: ["e-commerce", "MERN", "Node.js"],
+      images: [
+        bookstore8, bookstore1, bookstore2, bookstore3,
+        bookstore9, bookstore10, bookstore4,
+        bookstore5, bookstore6, bookstore7,
+      ],
     },
     {
       id: 2,
       image: appointment,
       title: "Appointment Calendar",
-      description: "A full-stack social media application featuring real-time chat and more.",
-      details: "Developed using MERN stack with Socket.io for real-time chat functionality. Includes user profiles, posts, and friend requests.",
+      description: "An intuitive full-stack application for managing appointments.",
+      details:
+        "Developed with the MERN stack and integrated with Socket.io for real-time updates. Features include appointment scheduling, calendar synchronization, and real-time communication.",
+      tags: ["calendar", "Appointment"],
       images: [appointment, appointment2],
     },
     {
       id: 3,
       image: social2,
       title: "Social Media",
-      description: "A sleek and professional portfolio showcasing personal and client projects.",
-      details: "Built with Next.js and Tailwind CSS. Features dynamic project loading and responsive design.",
-      images: [social1,social9 , social2, social3,social4,social5,social6,social7,social8],
+      description: "A feature-rich social networking platform with dynamic interactions.",
+      details:
+        "Built with Next.js and Tailwind CSS. Includes responsive design, dynamic project loading, and interactive features such as posts, friend requests, and user profiles.",
+      tags: ["social media", "MERN", "Tailwind CSS"],
+      images: [
+        social1, social9, social2, social3,
+        social4, social5, social6, social7, social8,
+      ],
     },
   ];
 
   const openModal = (project) => {
     setSelectedProject(project);
-    setCurrentImageIndex(0); // Reset slider to first image
+    setCurrentImageIndex(0);
   };
 
   const closeModal = () => setSelectedProject(null);
 
   const nextImage = () => {
     if (selectedProject) {
-      setCurrentImageIndex((prevIndex) =>
-        (prevIndex + 1) % selectedProject.images.length
+      setCurrentImageIndex(
+        (prevIndex) => (prevIndex + 1) % selectedProject.images.length
       );
     }
   };
 
   const prevImage = () => {
     if (selectedProject) {
-      setCurrentImageIndex((prevIndex) =>
-        (prevIndex - 1 + selectedProject.images.length) % selectedProject.images.length
+      setCurrentImageIndex(
+        (prevIndex) =>
+          (prevIndex - 1 + selectedProject.images.length) %
+          selectedProject.images.length
       );
     }
   };
@@ -115,7 +129,7 @@ function Experiance() {
             </button>
             <h2 className="text-2xl font-bold mb-4">{selectedProject.title}</h2>
             <p className="text-gray-600 mb-4">{selectedProject.details}</p>
-            <div className="relative">
+            <div className="relative mb-4">
               <img
                 src={selectedProject.images[currentImageIndex]}
                 className="w-full h-[300px] object-cover rounded-lg"
@@ -133,6 +147,19 @@ function Experiance() {
               >
                 &rarr;
               </button>
+            </div>
+            <div>
+              <h3 className="text-lg font-bold">Tags:</h3>
+              <ul className="flex flex-wrap gap-2 mt-2">
+                {selectedProject.tags.map((tag, index) => (
+                  <li
+                    key={index}
+                    className="bg-gray-200 text-gray-700 text-sm px-3 py-1 rounded-full"
+                  >
+                    {tag}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
