@@ -58,7 +58,7 @@ function Experiance() {
         "Built with Next.js and Tailwind CSS. Includes responsive design, dynamic project loading, and interactive features such as posts, friend requests, and user profiles.",
       tags: ["social media", "MERN", "Tailwind CSS"],
       images: [
-        social1, social9, social2, social3,
+         social2, social3,
         social4, social5, social6, social7, social8,
       ],
     },
