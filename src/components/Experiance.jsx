@@ -11,7 +11,6 @@ import bookstore9 from "../assets/img/bookstore9.jpg"
 import bookstore10 from "../assets/img/bookstore10.jpg"
 import appointment from "../assets/img/appointment.jpg"
 import appointment2 from "../assets/img/appointment2.jpg"
-import social1 from "../assets/img/social1.jpg"
 import social2 from "../assets/img/social2.jpg"
 import social3 from "../assets/img/social3.jpg"
 import social4 from "../assets/img/social4.jpg"
@@ -19,7 +18,27 @@ import social5 from "../assets/img/social5.jpg"
 import social6 from "../assets/img/social6.jpg"
 import social7 from "../assets/img/social7.jpg"
 import social8 from "../assets/img/social8.jpg"
-import social9 from "../assets/img/social9.jpg"
+import school1 from "../assets/img/school1.jpg"
+import school2 from "../assets/img/school2.jpg"
+import school3 from "../assets/img/school3.jpg"
+import school4 from "../assets/img/school4.jpg"
+import school5 from "../assets/img/school5.jpg"
+import school6 from "../assets/img/school6.jpg"
+import school7 from "../assets/img/school7.jpg"
+import school8 from "../assets/img/school8.jpg"
+import school9 from "../assets/img/school9.jpg"
+import school10 from "../assets/img/school10.jpg"
+import school11 from "../assets/img/school11.jpg"
+import school12 from "../assets/img/school12.jpg"
+import school13 from "../assets/img/school13.jpg"
+import school14 from "../assets/img/school14.jpg"
+import school15 from "../assets/img/school15.jpg"
+import school16 from "../assets/img/school16.jpg"
+import school17 from "../assets/img/school17.jpg"
+import school18 from "../assets/img/school18.jpg"
+import school19 from "../assets/img/school19.jpg"
+import school20 from "../assets/img/school20.jpg"
+import school21 from "../assets/img/school21.jpg"
 
 function Experiance() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -55,11 +74,24 @@ function Experiance() {
       title: "Social Media",
       description: "A feature-rich social networking platform with dynamic interactions.",
       details:
-        "Built with Next.js and Tailwind CSS. Includes responsive design, dynamic project loading, and interactive features such as posts, friend requests, and user profiles.",
+        "Built with React.js and Tailwind CSS. Includes responsive design, dynamic project loading, and interactive features such as posts, friend requests, and user profiles.",
       tags: ["social media", "MERN", "Tailwind CSS"],
       images: [
          social2, social3,
         social4, social5, social6, social7, social8,
+      ],
+    },
+    {
+      id: 3,
+      image: school1,
+      title: "School Management System"  ,
+description: "A robust platform for managing all aspects of school operations, ensuring efficiency and collaboration among students, teachers, and administrators."  ,
+details:  
+"Built with React.js and Tailwind CSS. Includes a responsive design, dynamic data handling, and an intuitive admin panel. Features cover student and teacher management, class scheduling, attendance tracking, performance monitoring, fee management, and communication tools. The admin panel enables seamless control over user roles, school operations, and real-time reporting."  ,
+
+      tags: ["School Management", "React.js", "Tailwind CSS", "Admin Panel", "Student Management", "Teacher Management", "Performance Analytics"],      images: [
+         school1, school2,
+         school3, school4, school5, school6, school7,school8,school9,school10,school11,school12,school13,school14,school15,school16,school17,school18,school19,school20,school21
       ],
     },
   ];
