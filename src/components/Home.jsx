@@ -78,12 +78,18 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="md:w-1/2 md:ml-48 md:mt-20 mt-8 order-1">
-            <img
-              src={pic}
-              className="rounded-full md:w-[450px] md:h-[450px]"
-              alt=""
-            />
+          <div className=" md:ml-48 mt-8 order-1">
+          <div className="flex justify-center items-center rounded-full bg-gray-300 md:w-[450px] md:h-[450px] overflow-hidden">
+  <img
+    src=""
+    className="rounded-full md:w-[450px] md:h-[450px] object-cover"
+    alt=""
+    onError={(e) => {
+      e.target.style.display = "none"; // Hide the image if it doesn't load
+    }}
+  />
+</div>
+
           </div>
         </div>
       </div>
